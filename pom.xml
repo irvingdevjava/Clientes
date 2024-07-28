@@ -72,6 +72,12 @@
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
 			<version>2.6.0</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.google.code.findbugs</groupId>
+			<artifactId>findbugs-annotations</artifactId>
+			<version>3.0.1</version>
+		</dependency>
 		
 
 		<!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
@@ -127,6 +133,12 @@
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.12</version>
+				<configuration>
+					<excludes>
+						<exclude>com.personal.irving.demo/DemoApplication.java</exclude>
+						<exclude>com.personal.irving.demo/ServletInitializer.java</exclude>
+					</excludes>
+				</configuration>
                 <executions>
                     <execution>
                         <goals>
